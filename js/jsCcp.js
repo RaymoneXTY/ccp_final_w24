@@ -19,9 +19,15 @@ document.querySelectorAll("video").forEach(function(img) {
     });
 });
 
-// open a new page for the image when clicked
+// open a new page for the image and video when clicked
 document.querySelectorAll("img").forEach(function(img) {
     img.addEventListener("click", function() {
         window.open(img.src);
+    });
+}   );
+
+document.querySelectorAll("video").forEach(function(video) {
+    img.addEventListener("click", function() {
+        window.open(video.src);
     });
 }   );
