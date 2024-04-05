@@ -1,0 +1,346 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Pacifico&display=swap");
+@font-face {
+    font-family: 'Font Awesome 5 Free';
+    font-style: normal;
+    font-weight: 900;
+    font-display: block;
+    src: url("https://amitsh.com/2020/styleStage/fontawesome/webfonts/fa-solid-900.eot");
+    src: url("https://amitsh.com/2020/styleStage/fontawesome/webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("https://amitsh.com/2020/styleStage/fontawesome/webfonts/fa-solid-900.woff2") format("woff2"), url("https://amitsh.com/2020/styleStage/fontawesome/webfonts/fa-solid-900.woff") format("woff"), url("https://amitsh.com/2020/styleStage/fontawesome/webfonts/fa-solid-900.ttf") format("truetype"), url("https://amitsh.com/2020/styleStage/fontawesome/webfonts/fa-solid-900.svg#fontawesome") format("svg");
+}
+
+@font-face {
+    font-family: 'Font Awesome 5 Brands';
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+    src: url("https://amitsh.com/2020/styleStage/fontawesome/webfonts/fa-brands-400.eot");
+    src: url("https://amitsh.com/2020/styleStage/fontawesome/webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("https://amitsh.com/2020/styleStage/fontawesome/webfonts/fa-brands-400.woff2") format("woff2"), url("https://amitsh.com/2020/styleStage/fontawesome/webfonts/fa-brands-400.woff") format("woff"), url("https://amitsh.com/2020/styleStage/fontawesome/webfonts/fa-brands-400.ttf") format("truetype"), url("https://amitsh.com/2020/styleStage/fontawesome/webfonts/fa-brands-400.svg#fontawesome") format("svg");
+}
+:root {
+    --clr-white: #fff;
+    --clr-background: #dfefff;
+    --clr-light: #bcd;
+    --clr-mid: #534;
+    --clr-dark: #345;
+    --clr-black: #123;
+    }
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+        -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+        -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    }
+
+body {
+    font-family: 'Open Sans', sans-serif, "Verdana";
+    background-color: var(--clr-background);
+    color: var(--clr-dark);
+    min-width: 320px;
+    }
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    font-weight: normal;
+    text-align: center;
+    line-height: 1;
+    font-size: 500%;
+    margin: 2%;
+    margin-bottom: 10%;
+    }
+h1::first-line {
+    color: var(--clr-mid);
+    }
+
+/* set the skip to main content link */
+a.skip_to_main {position: absolute;
+    left: -9999px;
+    z-index: 999;
+    padding: 1em;
+    background-color: var(--clr-black);
+    color: var(--clr-white);
+    border-radius: 5px;
+    opacity: 0;}
+
+a.skip_to_main:focus {left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    opacity: 1;}
+
+
+/* set the navigation bar */
+nav ul {display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1%;
+    background-color: var(--clr-mid);
+    margin-bottom: 5%;
+    z-index: 100;
+        }
+
+nav ul li {font-size: 120%;
+    font-weight: bold;
+    text-align: center;
+    color: var(--clr-white);
+    padding: 1%;
+    }
+
+#content {display: none;}
+
+a:link {color: var(--clr-white);}
+a:visited {color: lightgoldenrodyellow;}
+a:hover {color: var(--clr-light);
+    background-color: var(--clr-dark);}
+a:active {color: var(--clr-dark);
+    background-color: var(--clr-light);}
+a.current {color: var(--clr-dark);
+    background-color: var(--clr-white);
+    border-radius: 5px;;
+    font-style: italic;}
+
+/* set the link in the main content ares */
+a.source{font-style: oblique;
+    text-decoration: underline;}
+a.source:link {color: var(--clr-mid);}
+a.source:visited {color: var(--clr-dark);}
+a.source:hover {color: var(--clr-light);
+    background-color: var(--clr-dark);}
+a.source:active {color: var(--clr-light);}
+
+
+h2 {font-family: 'Pacifico', cursive;
+    font-weight: normal;
+    text-align: center;
+    color: var(--clr-mid);
+    font-size: 300%;
+    margin: 10% 2% 5% 2%;
+    }
+h3 {font-family: 'Pacifico', cursive;
+    font-weight: normal;
+    text-align: center;
+    line-height: 1;
+    font-size: 200%;
+    margin: 8% 2%;
+    }
+
+p { display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Verdana", sans-serif, "Font Awesome 5 Free";
+    font-size: 100%;
+    line-height: 2;
+    padding: 5%;
+    margin: auto;}
+
+p.intro {font-size: 100%;
+        font-weight: bold;}
+
+img {display: block;
+    padding: 5%;
+    margin: 2%;}
+
+img.intro {width:75%;
+           margin: auto;
+        border-radius: 15%;}
+
+video {display: block;
+    padding: 5%;
+    margin: 2%;}
+
+div ul {display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 100%;
+    font-family: "Font Awesome 5 Brands", "Verdana";
+    line-height: 2;
+    list-style-type: var(--clr-mid);
+    list-style-position: outside;
+    }
+
+div ol {display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5%;
+    font-size: 100%;
+    font-family: "Font Awesome 5 Brands", "Verdana";
+    line-height: 2;
+    list-style-type: lower-alpha;
+    list-style-position: inside;
+    margin: auto;
+    }
+
+
+
+footer {font-family: "Font Awesome 5 Brands", "Verdana";
+    font-size: 50%;
+    text-align: center;
+    margin: 5%;}
+
+
+
+/* set the grid layout for the pets gallery */
+.pet_gallery {display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2%;
+    grid-gap: 1%;
+    background-color: var(--clr-light);
+    align-items: center;
+    justify-items: center;
+    align-content: space-evenly;}
+
+
+.pet_gallery * {width: 100%;
+    height: 100%;
+    object-fit: cover;}
+
+
+/* set the grid layout for the recipes gallery */
+.recipe_gallery {display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2%;
+    margin: 1%;
+    grid-gap: 1%;
+    border: 5px solid var(--clr-white);
+    background-color: var(--clr-background);
+    align-items: center;
+    justify-items: center;
+    align-content: space-evenly;}
+
+.recipe_gallery * {width: 100%;
+    height: 100%;
+    object-fit: cover;}
+
+.recipe_gallery :last-child {grid-column: span 2;}
+
+/* set the grid layout for the travel gallery */
+.travel_gallery {display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2%;
+    border: 5px solid var(--clr-white);
+    margin: 1%;
+    padding: 3%;
+    align-items: start;
+    justify-items: center;
+    align-content: space-evenly;}
+.travel_gallery img {width: 100%;
+    object-fit: cover;}
+.travel_gallery figcaption {text-align: center;
+    font-size: 50%;
+    font-family: "Font Awesome 5 Brands";
+    line-height: 1.5;
+    margin: 1%;}
+
+/* set the layout for tablet view */
+@media (min-width: 768px) {
+nav ul li {font-size: 150%;}
+.catalogue {display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 5%;
+            padding: 2%;
+            margin: 4%;
+            align-items: start;
+            justify-items: center;
+            align-content: space-around;}
+.catalogue ul {align-items: flex-start;}
+.catalogue h3 {grid-row: 1;}
+.catalogue ul {grid-row: 2;}
+h2 {font-size: 400%;}
+h3 {font-size: 300%;}
+p {font-size: 150%;}
+p.intro {font-size: 200%;}
+nav ul {font-size: 120%;}
+ol li {font-size: 200%;}
+ul li {font-size: 200%;}
+footer {font-size: 100%;
+        margin: 5%;
+        padding: 5%;}
+.pet_gallery {grid-template-columns: repeat(4, 250px);
+                    justify-content: space-between;
+                    overflow: auto;}
+.recipe_gallery {grid-template-columns: repeat(3, 1fr);}
+.recipe_gallery :last-child {grid-column: 3/-1;}
+.travel_gallery {grid-template-columns: repeat(4, 300px);
+            justify-content: space-between;
+            overflow: auto;}
+.travel_gallery figure img {height: 20vh;
+            object-fit:fill;}
+#content {display: flex;
+            flex-direction: row;
+            padding: 5%;
+            width: 100%;
+            gap: 2%;
+            grid-area: 1/1/2/2;
+	        position: relative;
+            margin: auto;
+            margin-bottom: 3vh;}
+#content a {font-family: "Verdana", sans-serif, "Font Awesome 5 Free";
+		    color: #333;
+		    cursor: pointer;
+		    font-size: 150%;
+		    font-weight: normal;
+		    line-height: 1;
+		    position: relative;
+		    text-align: center;
+		    margin: 1vh auto;
+		    padding: 1vh;
+		    width: 30%;
+		    background: rgba(255, 255, 255, 0.3);
+		    backdrop-filter: blur(15px);
+		    border-radius: 5px;
+		    box-shadow: 1px 1px 0 0 rgba(255, 255, 255, 0.8) inset,
+			3px 5px 10px 0 rgba(0, 0, 0, 0.1);
+		    text-decoration: none;
+		    will-change: color, text-shadow, font-size;
+		    transition: ease all 0.3s;}
+#content a:hover {
+                transform: scale(1.1);
+                background: rgba(255, 255, 255, 0.8);
+            }
+        }
+
+/* set the layout for desktop view */
+@media (min-width: 1024px) {
+    div.introduction{display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 2%;
+        margin: 2%;
+        align-items: center;
+        justify-items: center;
+        align-content: space-evenly;
+        border: solid 5px var(--clr-white);}
+    div.travel_intro{display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 2%;
+        margin: 2%;
+        align-items: center;
+        justify-items: center;
+        align-content: space-evenly;
+        border: solid 5px var(--clr-white);}
+    image#one {grid-column: 1/2;
+        grid-row: 1;}
+    image#two {grid-column: 1/2;
+        grid-row: 2;}
+    h3#three {grid-column: 2/3;
+        grid-row: 1;}
+    p#four {grid-column: 2/3;
+        grid-row: 2;}
+    img.intro {width: 75%;}
+    nav ul li:first-child {background-image: url(../icons/index_icon.png);}
+    nav ul li:nth-child(2) {background-image: url(../icons/pet_icon.png);}
+    nav ul li:nth-child(3) {background-image: url(../icons/recipe_icon.png);}
+    nav ul li:nth-child(4) {background-image: url(../icons/travel_icon.png);}
+    nav ul li {background-size: 25%;
+        background-repeat: no-repeat;
+        background-position: left center;
+        padding: 1% 5%;
+        margin: 0% 3%;}
+    #content a {font-size: 200%;}
+}
