@@ -343,4 +343,8 @@ footer {font-size: 100%;
         padding: 1% 5%;
         margin: 0% 3%;}
     #content a {font-size: 200%;}
+    p {font-size: 200%;}
+    .travel_gallery figcaption {font-size: 100%;}
+    a.skip_to_main {font-size: 200%;}
+    *:focus {outline: 5px dashed var(--clr-white);}
 }
